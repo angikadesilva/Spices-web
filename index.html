@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            position: relative;
+            background: url('image1.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            z-index: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: transparent; /* Set header background to transparent */
+            z-index: 2; 
+            position: relative; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            cursor: pointer; /* Add cursor pointer to indicate clickability */
+        }
+
+        .epic {
+            font-size: 24px;
+            color: white;
+        }
+
+        .dot {
+            color: #28a745;
+            font-size:xx-large;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .navbar a {
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 80px); /* Adjusting height based on header */
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 2; /* Ensure main content is above the overlay */
+            position: relative; /* Ensure main content remains on top */
+        }
+
+        main h1 {
+          font-family: "Dancing Script", cursive;
+            font-size: 60px;
+            margin-bottom: 7px;
+            margin-top: 5px; /* Adjusted margin-top */
+        }
+
+        main p.first-paragraph {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 40px;
+            margin: 2px 0;
+        }
+
+        main p.second-paragraph {
+          font-family: Arial, Helvetica, sans-serif; /* Change font for the second paragraph */
+            font-size: 17px;
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <!-- Wrap logo in an anchor tag -->
+            <span class="epic">Epic<span class="dot">.</span>Green</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="receiving.php">Goods Receiving</a>
+            <a href="processing.php">Raw Material Stock</a>
+            <a href="jobfile.php">Jobfile</a>
+            <a href="jstock.php">Semi Processed Goods</a>
+            <a href="package.php">Package</a>
+            <a href="admin.php" class="admin-link">Admin</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Taste Matters!</h1>
+            <p class="first-paragraph">"Handpicked with love in Matale"</p>
+            <p class="second-paragraph">Embrace Timeless Essences: Elevating Culinary Delights with Exquisite Flavours of Asia.</p>
+        </div>
+    </main>
+</body>
+</html>
